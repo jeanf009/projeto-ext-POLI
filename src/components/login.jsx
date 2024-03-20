@@ -1,9 +1,16 @@
 import '../components/login.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie'
+
 
 function Login() {
     const [cpf, setCpf] = useState('');
     const [senha, setSenha] = useState('');
+    const [nome] = useState('');
+    const [authenticated, setAuthenticated] = useState(false);
+
+    const Navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -22,6 +29,12 @@ function Login() {
             if (response.ok) {
                 
                 console.log('Login bem-sucedido');
+                setAuthenticated(true);
+
+                Cookies.set('cpf', cpf);
+                Cookies.set('senha', senha);
+                Cookies.set('nome', nome);
+
 
             } else {
                 console.error('Falha no login');
@@ -33,6 +46,15 @@ function Login() {
 
     return (
         <div className="login-container">
+        
+        {authenticated === true && (
+
+            Navigate('/agendamentos')
+            
+        )}
+
+        {authenticated !== true && (
+        <div>
             <h1 className='login-text'>Login</h1>
             <div className="login-box">
                 <form onSubmit={handleSubmit} action="/login" method="post">
@@ -47,7 +69,7 @@ function Login() {
                     
                     <label className='login-text2' htmlFor="senha">Senha:</label>
                     <input
-                        type='password'
+                        type="password"
                         id="senha"
                         name="senha"
                         value={senha}
@@ -57,8 +79,13 @@ function Login() {
                     <input type="submit" value="Enviar" />
                 </form>
             </div>
+
+            </div>
+            )}
+
         </div>
-    );
+    )
+    
 }
 
 export default Login;

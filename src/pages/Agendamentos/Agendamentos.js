@@ -1,9 +1,10 @@
 import '../../components/agendamentos.css'
 
+
 function Agendamentos() {
     return(
         <div className="container-esquerda">
-            <span>oi</span>
+            <span>Bem-vindo!</span>
         </div>
     )
 }

@@ -1,10 +1,12 @@
 [
     {
         "cpf": "123",
-        "senha": "1234"
+        "senha": "1234",
+        "nome": "Fulano"
     },
     {
         "cpf": "111",
-        "senha": "1234"
+        "senha": "1234",
+        "nome": "Ciclano"
     }
 ]
