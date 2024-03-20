@@ -50,7 +50,7 @@ function Login() {
         {authenticated === true && (
 
             Navigate('/agendamentos')
-            
+
         )}
 
         {authenticated !== true && (
