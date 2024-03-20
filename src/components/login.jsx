@@ -7,7 +7,7 @@ import Cookies from 'js-cookie'
 function Login() {
     const [cpf, setCpf] = useState('');
     const [senha, setSenha] = useState('');
-    const [nome] = useState('');
+    // const [nome] = useState('');
     const [authenticated, setAuthenticated] = useState(false);
 
     const Navigate = useNavigate();
@@ -33,7 +33,7 @@ function Login() {
 
                 Cookies.set('cpf', cpf);
                 Cookies.set('senha', senha);
-                Cookies.set('nome', nome);
+                // Cookies.set('nome', nome);
 
 
             } else {
