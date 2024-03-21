@@ -8,12 +8,12 @@ O projeto foi pensado para facilitar a integração do Complexo Hospitalar da UP
 
 # Alunos
 
-- Douglas Henrique\
-- Emerson Nascimento\
-- Giovanni Cláudio\
-- Jean Felipe\
-- Márcio Henrique\
-- Rafael Lima\
+- Douglas Henrique
+- Emerson Nascimento
+- Giovanni Cláudio
+- Jean Felipe
+- Márcio Henrique
+- Rafael Lima
 - Thiago Calvacanti
 
 # Como utilizar a aplicação
